@@ -232,6 +232,39 @@ select option {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
+footer {
+  background: #111;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.Logo,
+.Social {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.Logo img,
+.Social img {
+  max-height: 35px;
+  width: auto;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* TABLET */
 @media (max-width: 992px) {
 
