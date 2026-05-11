@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>826 Auto Aesthetic & Protection | Booking</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.ico">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
 
+    <header>
+        <nav> 
+            <div class="logo-826">
+                <img src="Images/Logo.png" alt="logo">
+            </div>
+        
+            <h1 class="logo">Auto Aesthetic & Protection</h1>
+        
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="img">
+        <img src="Images/Mustang.jpg" alt="Background Image">
+    </div>
+
+    <div class="form">
+        <div class="form-text">
+            <h1>Book Now</h1>
+        </div>
+
+        <!-- Booking Form -->
+        <form class="booking-form">
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-box">
+                <label>Select Service</label>
+                <select required>
+                    <option value="">Choose a service</option>
+                    <option>Car Wash</option>
+                    <option>Exterior Detailing</option>
+                    <option>Interior Detailing</option>
+                    <option>Ceramic Coating</option>
+                    <option>Paint Protection Film</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Booking Date</label>
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <label>Additional Notes</label>
+                <textarea rows="5" placeholder="Enter additional details..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Book Appointment
+            </button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
