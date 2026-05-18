@@ -10,7 +10,6 @@ if (toggle) {
   };
 }
 
-// Close mobile menu when clicking outside
 document.addEventListener("click", (e) => {
   if (navLinks && navLinks.classList.contains("active") && !navLinks.contains(e.target) && e.target !== toggle) {
     navLinks.classList.remove("active");
@@ -57,9 +56,6 @@ window.addEventListener("load",   onScrollHighlight);
 window.addEventListener("resize", onScrollHighlight);
 
 
-/* ==========================================================================
-   2. SCROLL REVEAL ANIMATIONS
-   ========================================================================== */
 const revealSections = document.querySelectorAll("#services, #about, .reviews-section, #contact");
 
 if (revealSections.length > 0) {
@@ -82,9 +78,7 @@ if (revealSections.length > 0) {
 }
 
 
-/* ==========================================================================
-   3. BOOKING FORM & CONFIRMATION
-   ========================================================================== */
+/* BOOKING FORM & CONFIRMATION */
 const form = document.querySelector(".booking-form");
 let savedFormHTML = "";
 
@@ -92,8 +86,13 @@ function disableBookedDates() {
   const dateInput = document.querySelector('input[type="date"]');
   if (!dateInput) return;
 
-  const today = new Date().toISOString().split("T")[0];
-  dateInput.setAttribute("min", today);
+const localDate = new Date();
+  const year = localDate.getFullYear();
+  const month = String(localDate.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+  const day = String(localDate.getDate()).padStart(2, '0');
+  const todayLocal = `${year}-${month}-${day}`;
+
+  dateInput.setAttribute("min", todayLocal);
   dateInput.setCustomValidity("");
 
   dateInput.addEventListener("input", function() {
@@ -167,7 +166,7 @@ function validateForm() {
       showError(phone, "Phone number must be exactly 11 digits.");
       valid = false;
     } else if (!rawDigits.startsWith("09")) {
-      showError(phone, "The phone number must start with 09 (Philippine mobile format).");
+      showError(phone, "The phone number must start with 09.");
       valid = false;
     }
   }
@@ -184,11 +183,23 @@ function validateForm() {
     valid = false;
   }
 
-  const year = form.querySelector('#vehicle-year');
-  if (!year.value.trim()) {
-    showError(year, "Vehicle year is required.");
-    valid = false;
-  }
+const year = form.querySelector('#vehicle-year');
+const currentYearValue = parseInt(year.value.trim(), 10);
+const maxAllowedYear = new Date().getFullYear() + 1; 
+
+if (!year.value.trim()) {
+  showError(year, "Vehicle year is required.");
+  valid = false;
+} else if (isNaN(currentYearValue)) {
+  showError(year, "Please enter a valid numeric year.");
+  valid = false;
+} else if (currentYearValue > maxAllowedYear) {
+  showError(year, `Vehicle year cannot be further than the year ${maxAllowedYear}.`);
+  valid = false;
+} else if (currentYearValue < 1900) {
+  showError(year, "Please enter a realistic vehicle year.");
+  valid = false;
+}
 
   const checked = form.querySelectorAll('input[name="services"]:checked');
   const checkboxGroup = form.querySelector(".checkbox-group");
@@ -240,9 +251,7 @@ function getFormData() {
 }
 
 
-/* ==========================================================================
-   PHONE NUMBER FORMATTING (09XX XXX XXXX)
-   ========================================================================== */
+/* PHONE NUMBER FORMATTING */
 const phoneInput = document.getElementById("phone");
 
 if (phoneInput) {
@@ -414,13 +423,10 @@ if (form) {
 }
 
 
-/* ==========================================================================
-   4. PURE JAVASCRIPT IMAGE LIGHTBOX OVERLAY GALLERY SYSTEM
-   ========================================================================== */
+/* IMAGE LIGHTBOX OVERLAY GALLERY SYSTEM*/
 let imageOverlay = document.getElementById("image-overlay");
 let overlayImg   = document.getElementById("overlay-img");
 
-// Automatically build and append the Lightbox markup and CSS rules directly to the page on load
 if (!imageOverlay) {
   imageOverlay = document.createElement("div");
   imageOverlay.id = "image-overlay";
@@ -441,7 +447,6 @@ if (!imageOverlay) {
   imageOverlay.appendChild(closeBtn);
   document.body.appendChild(imageOverlay);
 
-  // Append functional theme-matching lightbox styling natively
   const style = document.createElement("style");
   style.textContent = `
     #image-overlay {
@@ -534,8 +539,6 @@ if (!imageOverlay) {
     }
   `;
   document.head.appendChild(style);
-
-  // Wire up the Exit button click handler
   closeBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     closeOverlay();
@@ -595,7 +598,6 @@ if (imageOverlay) {
   });
 }
 
-/* --- HANDLING TYPE A: STACKED FLIP GALLERY IMAGES --- */
 const stackedContainers = document.querySelectorAll(".stacked");
 
 stackedContainers.forEach(container => {
@@ -664,7 +666,6 @@ stackedContainers.forEach(container => {
   });
 });
 
-/* --- HANDLING TYPE B: STANDARD FLAT GALLERY IMAGES --- */
 const allDetailImages = Array.from(document.querySelectorAll(".feature-image, .pd-image, .about-image"));
 const nonStacked = allDetailImages.filter(img => !img.closest(".stacked"));
 
@@ -697,14 +698,12 @@ if (imageOverlay) {
     const clickedOnNext  = overlayNextBtn && overlayNextBtn.contains(t);
     const clickedOnClose = t.classList.contains("overlay-close");
     
-    // Close overlay if background backdrop area is targeted directly
     if (!clickedOnImage && !clickedOnPrev && !clickedOnNext || clickedOnClose) {
       closeOverlay();
     }
   });
 }
 
-/* --- KEYBOARD CONTROLS FOR ACCESSIBILITY --- */
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     return closeOverlay();
