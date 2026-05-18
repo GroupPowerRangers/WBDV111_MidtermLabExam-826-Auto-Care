@@ -175,8 +175,6 @@ nav {
   transition: 0.3s ease;
 }
 
-
-/* Fix for the Year Input Arrows */
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
@@ -318,7 +316,7 @@ footer {
   transform: scale(1.15);
 }
 
-/* LOGO CAROUSEL RUNNER */
+/* LOGO CAROUSEL */
 .payment-slider {
   width: 100%;
   overflow: hidden;
