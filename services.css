@@ -249,7 +249,7 @@ footer p {
   }
 }
 
-/* ── HERO ── */
+/* HERO */
 .service-hero {
     position: relative;
     min-height: 55vh;
@@ -325,7 +325,7 @@ footer p {
     transform: translateY(-2px);
 }
 
-/* ── DIVIDER LINE ── */
+/* DIVIDER LINE */
 .glow-divider {
     width: 100%;
     height: 1px;
@@ -333,7 +333,7 @@ footer p {
     margin: 0;
 }
 
-/* ── FEATURES GRID ── */
+/* FEATURES GRID */
 .features-section {
     padding: 70px 40px;
     max-width: 1100px;
@@ -417,7 +417,7 @@ footer p {
 }
 
 .feature-icon {
-  display: none; /* hide icon and remove blue box */
+  display: none;
 }
 
 .feature-text h3 {
@@ -493,7 +493,6 @@ footer p {
   z-index: 10;
 }
 
-/* Make stacked collapse to grid on small screens */
 @media (max-width: 992px) {
   .stacked { 
     height: auto !important;
@@ -848,8 +847,12 @@ footer p {
     height: 40px;
     font-size: 16px;
   }
-  .overlay-controls .prev { margin-left: 8px; }
-  .overlay-controls .next { margin-right: 8px; }
+  .overlay-controls .prev {
+     margin-left: 8px; 
+    }
+  .overlay-controls .next { 
+    margin-right: 8px; 
+  }
 }
 
 @media (max-width: 375px) {
@@ -858,6 +861,10 @@ footer p {
     height: 36px;
     font-size: 14px;
   }
-  .overlay-controls .prev { margin-left: 4px; }
-  .overlay-controls .next { margin-right: 4px; }
+  .overlay-controls .prev {
+     margin-left: 4px; 
+    }
+  .overlay-controls .next { 
+    margin-right: 4px; 
+  }
 }
