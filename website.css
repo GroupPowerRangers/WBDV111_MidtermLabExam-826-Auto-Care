@@ -179,7 +179,7 @@ nav {
 /* Background Images */
 @keyframes bgCarousel {
   0%, 20% {
-    background-image: url('Images/Mustang.jpg');
+    background-image: url('Images/mustang.jpg');
   }
   25%, 45% {
     background-image: url('Images/tesla.jpg');
@@ -191,7 +191,7 @@ nav {
     background-image: url('Images/civic.jpg');
   }
   100% {
-    background-image: url('Images/Mustang.jpg');
+    background-image: url('Images/mustang.jpg');
   }
 }
 
