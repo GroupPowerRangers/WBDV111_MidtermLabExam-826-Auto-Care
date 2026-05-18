@@ -18,6 +18,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER & NAVIGATION */
 header {
   position: fixed;
   top: 0;
@@ -667,11 +668,9 @@ footer {
   transform: translateY(0);
 }
 
-/* ==========================================
-   CLEANED & FIXED RESPONSIVE MEDIA QUERIES
-   ========================================== */
+/*  CLEANED & FIXED RESPONSIVE MEDIA QUERIES*/
 
-/* 1. Large Screens / Laptops */
+/* Laptops */
 @media (max-width: 1280px) {
   .about {
     flex-direction: column;
@@ -692,7 +691,7 @@ footer {
   }
 }
 
-/* 2. Tablets / Small Laptops */
+/* Tablets / Small Laptops */
 @media (max-width: 992px) {
   .logo { 
     font-size: 1rem; 
@@ -707,7 +706,7 @@ footer {
     max-width: 600px;
   }
   .location-grid {
-    grid-template-columns: 1fr; /* Simplifies columns cleanly on tablet */
+    grid-template-columns: 1fr; 
   }
   .book-cta-inner {
     flex-direction: column;
@@ -722,7 +721,7 @@ footer {
   }
 }
 
-/* 3. Mobile Viewports (Menu Breakpoint) */
+/* Mobile */
 @media (max-width: 768px) {
   header { 
     padding: 15px 20px; 
@@ -749,7 +748,6 @@ footer {
     transition: max-height 0.4s ease, padding 0.4s ease;
   }
 
-  /* This is the class your script toggles */
   .nav-links.active {
     max-height: 300px;
     padding: 20px;
@@ -784,7 +782,7 @@ footer {
   }
 }
 
-/* 4. Small Mobile Screen Optimization */
+/* Small Mobile */
 @media (max-width: 480px) {
   .logo { 
     font-size: 0.85rem; 
