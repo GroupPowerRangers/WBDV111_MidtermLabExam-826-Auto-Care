@@ -668,8 +668,6 @@ footer {
   transform: translateY(0);
 }
 
-/*  CLEANED & FIXED RESPONSIVE MEDIA QUERIES*/
-
 /* Laptops */
 @media (max-width: 1280px) {
   .about {
