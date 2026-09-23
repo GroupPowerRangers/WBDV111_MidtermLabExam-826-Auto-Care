@@ -10,17 +10,17 @@
 <body>
 <header>
     <nav> 
-        <a href="index.html" class="logo-826"><img src="Images/Logo.png" alt="logo"></a>
+        <a href="index.php" class="logo-826"><img src="Images/Logo.png" alt="logo"></a>
     
         <h1 class="logo">Auto Aesthetic & Protection</h1>
     
         <div class="menu-toggle" id="menu-toggle">☰</div>
     
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php#about">About</a></li>
+            <li><a href="index.php#services">Services</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -31,7 +31,7 @@
         <span class="tag">826 Signature Service</span>
         <h1>Package<br><span>Deal</span></h1>
         <p>Complete automotive protection and detailing bundle—everything your vehicle needs for maximum protection and pristine appearance.</p>
-        <a href="booking.html" class="hero-cta">Book Now</a>
+        <a href="booking.php" class="hero-cta">Book Now</a>
     </div>
 </section>
 
