@@ -17,10 +17,10 @@
             <div class="menu-toggle" id="menu-toggle">☰</div>
         
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php#about">About</a></li>
+                <li><a href="index.php#services">Services</a></li>
+                <li><a href="index.php#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,7 @@
             <span class="tag">826 Signature Service</span>
             <h1>Graphene<br><span>Coating</span></h1>
             <p>Advanced graphene protection for deeper shine, stronger hydrophobic performance, and maximum paint defense.</p>
-            <a href="booking.html" class="hero-cta">Book Now</a>
+            <a href="booking.php" class="hero-cta">Book Now</a>
         </div>
     </section>
  
