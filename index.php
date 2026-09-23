@@ -74,28 +74,28 @@
 
 <div class="services-grid">
   <div class="container">
-  <a href="service1.html">
+  <a href="service1.php">
     <img src="Images/PPF.jpg" alt="Ceramic">
     <div class="overlay">Graphene Coating</div>
   </a>
   </div>
 
   <div class="container">
-    <a href="service2.html">
+    <a href="service2.php">
       <img src="Images/Detailing.jpg" alt="Detailing">
       <div class="overlay">Detailing</div>
     </a>
   </div>
 
   <div class="container">
-  <a href="service3.html">
+  <a href="service3.php">
     <img src="Images/Repair.jpg" alt="Repair">
     <div class="overlay">Paint Protection Film</div>
   </a>
   </div>
 
   <div class="container">
-  <a href="service4.html">
+  <a href="service4.php">
     <img src="Images/Tint.jpg" alt="Tint">
     <div class="overlay">Package Deal</div>
   </a>
@@ -106,7 +106,7 @@
 <section class="book-cta">
   <div class="book-cta-inner">
     <p>Ready to book an appointment?</p>
-    <a href="booking.html" class="btn">Book Now</a>
+    <a href="booking.php" class="btn">Book Now</a>
   </div>
 </section>
 
